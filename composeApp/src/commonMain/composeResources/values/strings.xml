@@ -1,0 +1,8 @@
+<resources>
+    <string name="submit_button_title">Submit</string>
+    <string name="input_field_label">Type the name to lookup</string>
+    <string name="no_repositories_loaded">Can not load number of repositories</string>
+    <string name="image_content_description">Image for the repository of %1$</string>
+    <string name="number_of_repos_text">Number of repositories: %1$</string>
+    <string name="click_on_repos_message">Click to get the number of repositories</string>
+</resources>

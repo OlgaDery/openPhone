@@ -1,0 +1,8 @@
+CREATE TABLE gituser(
+    id TEXT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL DEFAULT '',
+    imageUrl TEXT NOT NULL DEFAULT '',
+    repositoriesUrl TEXT NOT NULL DEFAULT '',
+    numberOfRepositories INTEGER,
+    pageNumber INTEGER NOT NULL
+);

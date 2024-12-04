@@ -1,0 +1,79 @@
+[versions]
+agp = "8.5.2"
+android-compileSdk = "34"
+android-minSdk = "24"
+android-targetSdk = "34"
+androidx-activityCompose = "1.9.3"
+androidx-appcompat = "1.7.0"
+androidx-constraintlayout = "2.1.4"
+androidx-core-ktx = "1.13.1"
+androidx-espresso-core = "3.6.1"
+androidx-lifecycle = "2.8.3"
+androidx-material = "1.12.0"
+androidx-test-junit = "1.2.1"
+coilCompose = "3.0.4"
+compose-multiplatform = "1.7.0"
+junit = "4.13.2"
+koinCore = "4.0.0"
+koin-bom = "4.0.0"
+kotlin = "2.1.0"
+coroutines = "1.9.0"
+ktor = "3.0.1"
+dateTime = "0.4.1"
+kotlinSerializationJson = "1.6.3"
+lifecycleViewmodelCompose = "2.8.2"
+sqlDelight = "2.0.1"
+mockk = "1.13.9"
+mockative = "3.0.0"
+coroutines-test = "1.8.1"
+ksp = "2.1.0-1.0.29"
+mokkery = "2.6.0"
+uiTestJunit4Android = "1.7.5"
+
+[libraries]
+androidx-ui-test-junit4-android = { module = "androidx.compose.ui:ui-test-junit4-android", version.ref = "uiTestJunit4Android" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestJunit4Android" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-network-ktor3 = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coilCompose" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinCore" }
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+
+#kotlin
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+org-jetbrains-kotlinx-kotlinx-datetime = {module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "dateTime"}
+kotlinx-serialization-json = {group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerializationJson"}
+
+#ktor
+io-ktor-ktor-client-core = {module = "io.ktor:ktor-client-core", version.ref = "ktor"}
+io-ktor-ktor-client-content-negotiation = {module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor"}
+io-ktor-ktor-serialization-kotlinx-json = {module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor"}
+io-ktor-ktor-client-cio = {module = "io.ktor:ktor-client-cio", version.ref = "ktor"}
+io-ktor-ktor-client-auth = {module = "io.ktor:ktor-client-auth", version.ref = "ktor"}
+io-ktor-ktor-client-android = {module = "io.ktor:ktor-client-android", version.ref = "ktor"}
+io-ktor-ktor-client-darwin = {module = "io.ktor:ktor-client-darwin", version.ref = "ktor"}
+
+#sqldelight
+sqlDelight-coroutines = {group = "app.cash.sqldelight", name = "coroutines-extensions", version.ref = "sqlDelight"}
+sqlDelight-driver-android = {group = "app.cash.sqldelight", name = "android-driver", version.ref = "sqlDelight"}
+sqlDelight-driver-native = {group = "app.cash.sqldelight", name = "native-driver", version.ref = "sqlDelight"}
+
+#extra libs for testing
+kotlinx-coroutines-test = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines-test"}
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+mockativePlugin = {id = "io.mockative", version.ref = "mockative"}
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
+kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+sqlDelightPlugin = {id = "app.cash.sqldelight", version.ref = "sqlDelight"}
+mokkery = {id = "dev.mokkery", version.ref = "mokkery"}

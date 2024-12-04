@@ -1,0 +1,24 @@
+insertUser:
+INSERT INTO gituser (id, name, imageUrl, repositoriesUrl, numberOfRepositories, pageNumber)
+VALUES(?, ?, ?, ?, ?, ?);
+
+updateUserSetNumberOfRepositories:
+UPDATE gituser SET numberOfRepositories =:numberOfRepositories WHERE id =:id;
+
+updateGitUserPrimaryAttributes:
+UPDATE gituser SET name =:name, imageUrl =:imageUrl, repositoriesUrl =:repositoriesUrl  WHERE id =:id;
+
+selectAllUsers:
+SELECT * FROM gituser ORDER BY name;
+
+deleteAllUsers:
+DELETE FROM gituser;
+
+selectUsersForPages:
+SELECT * FROM gituser WHERE name LIKE '%' || :name || '%' AND pageNumber IN (?, ?) ORDER BY name;
+
+selectUsersByName:
+SELECT * FROM gituser WHERE name LIKE '%' || :name || '%' ORDER BY name;
+
+selectUserById:
+SELECT * FROM gituser WHERE id =:id;
